@@ -26,4 +26,8 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
 }
 
-addBookToLibrary();
+// addBookToLibrary();
+function displayBooks() {
+  // loop through myLibrary array
+  // show every book on page
+}
