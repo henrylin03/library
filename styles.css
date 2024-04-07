@@ -61,3 +61,8 @@ main {
 .add-book-button:active {
     filter: brightness(95%);
 }
+
+::backdrop {
+    background-color: hsl(195, 53%, 25%);
+    opacity: .75;
+}
