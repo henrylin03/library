@@ -72,7 +72,7 @@ dialog {
     margin: auto;
     border: none;
     border-radius: 20px;
-    min-height: 30vh;
-    min-width: 30vw;
+    min-height: 400px;
+    min-width: 600px;
     padding: 25px;
 }
