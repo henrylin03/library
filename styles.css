@@ -70,4 +70,9 @@ main {
 
 dialog {
     margin: auto;
+    border: none;
+    border-radius: 20px;
+    min-height: 30vh;
+    min-width: 30vw;
+    padding: 25px;
 }
