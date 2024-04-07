@@ -18,8 +18,10 @@ const myLibrary = [
   },
 ];
 
-function Book() {
-  // constructor
+function Book(title, author, coverUrl) {
+  this.title = title;
+  this.author = author;
+  this.coverUrl = coverUrl;
 }
 
 function addBookToLibrary() {
