@@ -21,7 +21,9 @@ function Book(title, author) {
 function addBookToLibrary() {
   const title = prompt("What is the title of the book?");
   const author = prompt("Who is the author of the book?");
-  console.log(title, author);
+
+  const newBook = new Book(title, author);
+  myLibrary.push(newBook);
 }
 
 addBookToLibrary();
