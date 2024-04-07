@@ -1,4 +1,4 @@
-const booksSection = document.querySelector("section.books");
+const booksSection = document.querySelector(".books");
 
 const myLibrary = [
   {
@@ -32,5 +32,19 @@ function displayBooks() {
   function showDetails(book) {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
+
+    const bookName = document.createElement("strong");
+    bookName.textContent = book.title;
+
+    const authorName = document.createElement("small");
+    authorName.textContent = book.author;
+
+    bookDiv.appendChild(bookName);
+    bookDiv.appendChild(authorName);
+    booksSection.appendChild(bookDiv);
   }
+
+  myLibrary.forEach((b) => showDetails(b));
 }
+
+displayBooks();
