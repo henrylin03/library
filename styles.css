@@ -62,7 +62,12 @@ main {
     filter: brightness(95%);
 }
 
+/* dialog / modal styling */
 ::backdrop {
     background-color: hsl(195, 53%, 25%);
     opacity: .75;
+}
+
+dialog {
+    margin: auto;
 }
