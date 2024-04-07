@@ -26,3 +26,21 @@ h1 {
     border-radius: 10px;
     padding: 25px 20px;
 }
+
+.add-book-button {
+    border: none;
+    outline: none;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-book-button:hover {
+    filter: brightness(105%);
+}
+
+.add-book-button:active {
+    filter: brightness(95%);
+}
