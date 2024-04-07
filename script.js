@@ -46,7 +46,7 @@ function displayBooks() {
     booksSection.appendChild(bookDiv);
   }
 
-  myLibrary.forEach((b) => showDetails(b));
+  myLibrary.forEach((book) => showDetails(book));
 }
 
 displayBooks();
