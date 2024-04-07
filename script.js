@@ -1,4 +1,6 @@
 const booksSection = document.querySelector(".books");
+const addBookButton = document.querySelector(".add-book-button");
+const dialog = document.querySelector("dialog");
 
 const myLibrary = [
   {
@@ -48,3 +50,4 @@ function displayBooks() {
 }
 
 displayBooks();
+addBookButton.addEventListener("click", () => dialog.showModal());
