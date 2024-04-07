@@ -1,3 +1,5 @@
+const booksSection = document.querySelector("section.books");
+
 const myLibrary = [
   {
     title: "Meditations",
@@ -26,8 +28,9 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
 }
 
-// addBookToLibrary();
 function displayBooks() {
-  // loop through myLibrary array
-  // show every book on page
+  function showDetails(book) {
+    const bookDiv = document.createElement("div");
+    bookDiv.classList.add("book");
+  }
 }
