@@ -13,3 +13,9 @@ h1 {
     width: 80%;
     margin: 0 auto;
 }
+
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
