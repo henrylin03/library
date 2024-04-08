@@ -67,9 +67,12 @@ button:active {
 }
 
 .add-book-button {
-    padding: 15px 60px;
+    padding: 15px 50px 15px 40px;
     border-radius: 10px;
     background-color: lightblue;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .delete-book-button {
