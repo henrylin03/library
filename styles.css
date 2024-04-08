@@ -43,7 +43,7 @@ section.books {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border: 2px solid lightblue;
+    border: 3px solid lightblue;
     border-radius: 10px;
     padding: 25px 20px;
     position: relative;
@@ -73,7 +73,8 @@ button:active {
 .add-book-button {
     padding: 15px 50px 15px 40px;
     border-radius: 10px;
-    background-color: lightblue;
+    background-color: hsl(197, 75%, 50%);
+    color: white;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -92,6 +93,16 @@ button:active {
 .delete-book-button:hover {
     background-color: hsl(0, 0%, 95%);
     border-radius: 100%;
+}
+
+.read-btn {
+    border: 1px solid hsl(197, 80%, 60%);
+    border-radius: 25px;
+    background-color: hsl(197, 80%, 95%);
+    color: hsl(197, 80%, 45%);
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 15px 25px;
 }
 
 /* dialog / modal styling */

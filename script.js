@@ -95,4 +95,3 @@ function toggleReadStatus() {
 openDialogBtn.addEventListener("click", () => dialog.showModal());
 dialogCancelBtn.addEventListener("click", () => dialog.close());
 form.addEventListener("submit", addBookToLibrary);
-hasReadCheckboxInBookDiv.addEventListener("change", toggleReadStatus);
