@@ -14,6 +14,7 @@ const toTitleCase = (str) =>
     .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
     .join(" ");
 
+// constructor
 function Book(title, author) {
   this.title = title;
   this.author = author;
@@ -53,8 +54,7 @@ function displayBooks() {
   booksSection.replaceChildren(...booksDivs);
 }
 
+// add event listeners
 openDialogBtn.addEventListener("click", () => dialog.showModal());
 dialogCancelBtn.addEventListener("click", () => dialog.close());
 form.addEventListener("submit", addBookToLibrary);
-
-// todo: clicking elsewhere from modal closes modal
