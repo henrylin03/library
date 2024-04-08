@@ -90,6 +90,12 @@ button:active {
     border-radius: 100%;
 }
 
+.read-status-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* dialog / modal styling */
 ::backdrop {
     background-color: hsl(195, 53%, 25%);
