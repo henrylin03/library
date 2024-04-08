@@ -53,3 +53,5 @@ function displayBooks() {
 displayBooks();
 addBookButton.addEventListener("click", () => dialog.showModal());
 closeDialogButton.addEventListener("click", () => dialog.close());
+
+// TODO: titlecase every word
