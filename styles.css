@@ -49,6 +49,10 @@ section.books {
     position: relative;
 }
 
+.book .read-status-container {
+    margin-top: 15px;
+}
+
 button {
     border: none;
     outline: none;
