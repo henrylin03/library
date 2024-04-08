@@ -47,13 +47,12 @@ main {
 button {
     border: none;
     outline: none;
-    background-color: lightblue;
     font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    filter: brightness(105%);
+    filter: brightness(103%);
 }
 
 button:active {
@@ -63,6 +62,7 @@ button:active {
 .add-book-button {
     padding: 15px 40px;
     border-radius: 10px;
+    background-color: lightblue;
 }
 
 /* dialog / modal styling */
@@ -90,7 +90,20 @@ label {
     color: hsl(195, 53%, 40%);
 }
 
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .button-group button {
     padding: 10px 20px;
+    width: 100px;
     border-radius: 5px;
+}
+
+#addBtn {
+    background-color: lightblue;
 }
