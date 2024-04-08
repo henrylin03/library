@@ -27,17 +27,10 @@ function Book(title, author) {
   this.author = author;
 }
 
-// function addBookToLibrary() {
-//   const title = prompt("What is the title of the book?");
-//   const author = prompt("Who is the author of the book?");
-
-//   const newBook = new Book(title, author);
-//   myLibrary.push(newBook);
-// }
-
-function handleFormSubmit(e) {
+function addBookToLibrary(e) {
   e.preventDefault();
   const newBook = new Book(newBookTitleInput.value, newBookAuthorInput.value);
+  myLibrary.push(newBook);
   console.log(newBook);
 }
 
@@ -63,6 +56,6 @@ function displayBooks() {
 displayBooks();
 openDialogBtn.addEventListener("click", () => dialog.showModal());
 dialogCancelBtn.addEventListener("click", () => dialog.close());
-form.addEventListener("submit", handleFormSubmit);
+form.addEventListener("submit", addBookToLibrary);
 
 // todo: clicking elsewhere from modal closes modal
