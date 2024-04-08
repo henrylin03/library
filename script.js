@@ -67,7 +67,6 @@ function displayBooks() {
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("id", "read-status");
     checkbox.setAttribute("name", "read-status");
-    checkbox.setAttribute("value", "read");
     if (book.hasRead) checkbox.setAttribute("checked");
     const label = document.createElement("label");
     label.setAttribute("for", "read-status");

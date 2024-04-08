@@ -90,12 +90,6 @@ button:active {
     border-radius: 100%;
 }
 
-.read-status-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 /* dialog / modal styling */
 ::backdrop {
     background-color: hsl(195, 53%, 25%);
@@ -130,6 +124,17 @@ form {
 dialog label {
     font-size: 0.75rem;
     color: hsl(195, 53%, 40%);
+}
+
+.read-status-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.read-status-container label {
+    font-size: 1rem;
 }
 
 input {
