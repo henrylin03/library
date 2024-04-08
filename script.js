@@ -46,7 +46,6 @@ function displayBooks() {
   booksSection.replaceChildren(...booksDivs);
 }
 
-displayBooks();
 openDialogBtn.addEventListener("click", () => dialog.showModal());
 dialogCancelBtn.addEventListener("click", () => dialog.close());
 form.addEventListener("submit", addBookToLibrary);
