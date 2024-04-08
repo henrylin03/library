@@ -51,3 +51,5 @@ function displayBooks() {
 
 displayBooks();
 addBookButton.addEventListener("click", () => dialog.showModal());
+
+// todo: clicking elsewhere from modal closes modal
