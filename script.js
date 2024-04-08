@@ -22,9 +22,11 @@ function addBookToLibrary(e) {
 
   dialog.close();
   displayBooks();
+  console.log(myLibrary);
 }
 
 function displayBooks() {
+  const booksDivs = [];
   function showDetails(book) {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
@@ -37,10 +39,11 @@ function displayBooks() {
 
     bookDiv.appendChild(bookName);
     bookDiv.appendChild(authorName);
-    booksSection.appendChild(bookDiv);
+    booksDivs.push(bookDiv);
   }
 
   myLibrary.forEach((book) => showDetails(book));
+  booksSection.replaceChildren(...booksDivs);
 }
 
 displayBooks();
