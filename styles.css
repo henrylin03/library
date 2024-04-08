@@ -49,6 +49,8 @@ button {
     outline: none;
     font-weight: bold;
     cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 button:hover {
@@ -104,6 +106,14 @@ form {
 label {
     font-size: 0.75rem;
     color: hsl(195, 53%, 40%);
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(195, 53%, 40%);
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .button-group {
