@@ -87,6 +87,13 @@ dialog>.inner {
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .question {
