@@ -33,15 +33,18 @@ function addBookToLibrary(e) {
   displayBooks();
 }
 
-function removeBookFromLibrary() {
-  console.log("book has been removed");
+function removeBookFromLibrary(e) {
+  console.log(e.target.getAttribute("array-index"));
 }
 
 function displayBooks() {
   const booksDivs = [];
+  let bookIndex = 0;
+
   function showDetails(book) {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
+    bookDiv.setAttribute("array-index", bookIndex);
 
     const bookName = document.createElement("strong");
     bookName.textContent = book.title;
@@ -52,12 +55,15 @@ function displayBooks() {
     const deleteBookBtn = document.createElement("button");
     deleteBookBtn.textContent = "x";
     deleteBookBtn.classList.add("delete-book-button");
+    deleteBookBtn.setAttribute("array-index", bookIndex);
     deleteBookBtn.addEventListener("click", removeBookFromLibrary);
 
     bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);
     bookDiv.appendChild(authorName);
     booksDivs.push(bookDiv);
+
+    bookIndex++;
   }
 
   myLibrary.forEach((book) => showDetails(book));
