@@ -55,7 +55,7 @@ function displayBooks() {
     deleteBookBtn.setAttribute("array-index", bookIndex);
     deleteBookBtn.addEventListener("click", removeBookFromLibrary);
 
-    const bookName = document.createElement("strong");
+    const bookName = document.createElement("h3");
     bookName.textContent = book.title;
 
     const authorName = document.createElement("small");
