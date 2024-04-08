@@ -6,6 +6,7 @@ const dialogConfirmBtn = document.querySelector("#submitBtn");
 const dialogCancelBtn = document.querySelector("#cancelBtn");
 const newBookTitleInput = document.querySelector("#title");
 const newBookAuthorInput = document.querySelector("#author");
+const hasReadCheckboxInDialog = document.querySelector("#read-already");
 
 const myLibrary = [];
 const toTitleCase = (str) =>
@@ -15,7 +16,7 @@ const toTitleCase = (str) =>
     .join(" ");
 
 // constructor
-function Book(title, author, hasRead = false) {
+function Book(title, author, hasRead) {
   this.title = title;
   this.author = author;
   this.hasRead = hasRead;
@@ -26,8 +27,10 @@ function addBookToLibrary(e) {
 
   const newBook = new Book(
     toTitleCase(newBookTitleInput.value),
-    toTitleCase(newBookAuthorInput.value)
+    toTitleCase(newBookAuthorInput.value),
+    hasReadCheckboxInDialog.checked
   );
+  console.log(newBook);
   myLibrary.push(newBook);
 
   dialog.close();
@@ -67,7 +70,7 @@ function displayBooks() {
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("id", "read-status");
     checkbox.setAttribute("name", "read-status");
-    if (book.hasRead) checkbox.setAttribute("checked");
+    checkbox.checked = book.hasRead;
     const label = document.createElement("label");
     label.setAttribute("for", "read-status");
     label.textContent = "I've read this book";
