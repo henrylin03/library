@@ -8,6 +8,11 @@ const newBookTitleInput = document.querySelector("#title");
 const newBookAuthorInput = document.querySelector("#author");
 
 const myLibrary = [];
+const toTitleCase = (str) =>
+  str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
+    .join(" ");
 
 function Book(title, author) {
   this.title = title;
@@ -17,7 +22,10 @@ function Book(title, author) {
 function addBookToLibrary(e) {
   e.preventDefault();
 
-  const newBook = new Book(newBookTitleInput.value, newBookAuthorInput.value);
+  const newBook = new Book(
+    toTitleCase(newBookTitleInput.value),
+    toTitleCase(newBookAuthorInput.value)
+  );
   myLibrary.push(newBook);
 
   dialog.close();
