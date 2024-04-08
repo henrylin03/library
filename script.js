@@ -68,8 +68,8 @@ function displayBooks() {
     hasReadDiv.classList.add("read-status-container");
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
-    checkbox.setAttribute("id", "read-status");
-    checkbox.setAttribute("name", "read-status");
+    checkbox.setAttribute("id", `read-status-${bookIndex}`);
+    checkbox.setAttribute("name", `read-status-${bookIndex}`);
     checkbox.checked = book.hasRead;
     const label = document.createElement("label");
     label.setAttribute("for", "read-status");
@@ -90,7 +90,13 @@ function displayBooks() {
   booksSection.replaceChildren(...booksDivs);
 }
 
-// add event listeners
+function toggleReadStatus() {
+  alert("triggered");
+  return;
+}
+
+// attach event listeners
 openDialogBtn.addEventListener("click", () => dialog.showModal());
 dialogCancelBtn.addEventListener("click", () => dialog.close());
 form.addEventListener("submit", addBookToLibrary);
+hasReadCheckboxInBookDiv.addEventListener("change", toggleReadStatus);
