@@ -33,6 +33,10 @@ function addBookToLibrary(e) {
   displayBooks();
 }
 
+function removeBookFromLibrary() {
+  return;
+}
+
 function displayBooks() {
   const booksDivs = [];
   function showDetails(book) {
