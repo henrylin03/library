@@ -30,7 +30,7 @@ main {
 
 section.books {
     display: inline-grid;
-    min-width: 25vw;
+    min-width: 35vw;
     resize: both;
     overflow: auto;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

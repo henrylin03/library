@@ -45,6 +45,10 @@ function displayBooks() {
     const authorName = document.createElement("small");
     authorName.textContent = book.author;
 
+    const deleteBookBtn = document.createElement("button");
+    deleteBookBtn.classList.add("delete-book-btn");
+
+    bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);
     bookDiv.appendChild(authorName);
     booksDivs.push(bookDiv);
