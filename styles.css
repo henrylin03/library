@@ -121,7 +121,7 @@ form {
     flex-direction: column;
 }
 
-label {
+dialog label {
     font-size: 0.75rem;
     color: hsl(195, 53%, 40%);
 }
