@@ -1,6 +1,7 @@
 const booksSection = document.querySelector(".books");
-const addBookButton = document.querySelector(".add-book-button");
+const openDialogBtn = document.querySelector(".add-book-button");
 const dialog = document.querySelector("dialog");
+const dialogCancelBtn = document.querySelector("#cancelBtn");
 
 const myLibrary = [
   {
@@ -50,6 +51,7 @@ function displayBooks() {
 }
 
 displayBooks();
-addBookButton.addEventListener("click", () => dialog.showModal());
+openDialogBtn.addEventListener("click", () => dialog.showModal());
+dialogCancelBtn.addEventListener("click", () => dialog.close());
 
 // todo: clicking elsewhere from modal closes modal

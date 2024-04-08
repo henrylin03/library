@@ -81,17 +81,13 @@ dialog {
     border: none;
     border-radius: 20px;
     min-width: 600px;
-    padding: 25px;
-}
-
-dialog>.inner {
-    height: 100%;
+    padding: 40px 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
 }
 
 .questions {
