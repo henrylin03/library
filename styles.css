@@ -44,22 +44,25 @@ main {
     padding: 25px 20px;
 }
 
-.add-book-button {
+button {
     border: none;
     outline: none;
     background-color: lightblue;
-    padding: 15px 40px;
-    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.add-book-button:hover {
+button:hover {
     filter: brightness(105%);
 }
 
-.add-book-button:active {
+button:active {
     filter: brightness(95%);
+}
+
+.add-book-button {
+    padding: 15px 40px;
+    border-radius: 10px;
 }
 
 /* dialog / modal styling */
@@ -85,4 +88,9 @@ dialog {
 label {
     font-size: 0.75rem;
     color: hsl(195, 53%, 40%);
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border-radius: 5px;
 }
