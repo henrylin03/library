@@ -66,16 +66,12 @@ function displayBooks() {
 
     const hasReadDiv = document.createElement("div");
     hasReadDiv.classList.add("read-status-container");
-    const checkbox = document.createElement("input");
-    checkbox.setAttribute("type", "checkbox");
-    checkbox.setAttribute("id", `read-status-${bookIndex}`);
-    checkbox.setAttribute("name", `read-status-${bookIndex}`);
-    checkbox.checked = book.hasRead;
-    const label = document.createElement("label");
-    label.setAttribute("for", "read-status");
-    label.textContent = "I've read this book";
-    hasReadDiv.appendChild(checkbox);
-    hasReadDiv.appendChild(label);
+    const readBtn = document.createElement("button");
+    readBtn.setAttribute("type", "button");
+    readBtn.setAttribute("array-index", bookIndex);
+    readBtn.classList.add("read-btn");
+    readBtn.textContent = "I've read this";
+    hasReadDiv.appendChild(readBtn);
 
     bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);
