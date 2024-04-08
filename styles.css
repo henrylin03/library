@@ -79,6 +79,12 @@ button:active {
     top: 10px;
     right: 20px;
     font-weight: 400;
+    padding: 2px 7px;
+}
+
+.delete-book-button:hover {
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 100%;
 }
 
 /* dialog / modal styling */
