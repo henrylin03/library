@@ -29,17 +29,20 @@ main {
 }
 
 .books {
-    display: grid;
+    display: inline-grid;
+    resize: both;
+    overflow: auto;
     grid-template-columns: repeat(autofit, minmax(250px, 1fr));
     gap: 10px;
-    width: 80dvw;
 }
 
 .book {
     min-width: 250px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     border: 1px solid lightblue;
     border-radius: 10px;
     padding: 25px 20px;
