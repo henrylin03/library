@@ -34,7 +34,9 @@ function addBookToLibrary(e) {
 }
 
 function removeBookFromLibrary(e) {
-  console.log(e.target.getAttribute("array-index"));
+  const indexOfBookBeingRemoved = e.target.getAttribute("array-index");
+  myLibrary.splice(indexOfBookBeingRemoved, 1);
+  displayBooks();
 }
 
 function displayBooks() {
