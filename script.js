@@ -50,7 +50,8 @@ function displayBooks() {
     authorName.textContent = book.author;
 
     const deleteBookBtn = document.createElement("button");
-    deleteBookBtn.classList.add("delete-book-btn");
+    deleteBookBtn.textContent = "x";
+    deleteBookBtn.classList.add("delete-book-button");
 
     bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);

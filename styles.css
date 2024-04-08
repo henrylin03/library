@@ -71,6 +71,11 @@ button:active {
     background-color: lightblue;
 }
 
+.delete-book-button {
+    background: transparent;
+    color: hsl(195, 53%, 65%);
+}
+
 /* dialog / modal styling */
 ::backdrop {
     background-color: hsl(195, 53%, 25%);
