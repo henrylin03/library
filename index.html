@@ -18,24 +18,22 @@
         <section class="add-book">
 
             <dialog>
-                <div class="inner">
-                    <form>
-                        <div class="questions">
-                            <div class="question">
-                                <label for="title">Title*</label>
-                                <input type="text" id="title" required placeholder="The Hobbit">
-                            </div>
-                            <div class="question">
-                                <label for="author">Author*</label>
-                                <input type="text" id="author" required placeholder="J.R.R. Tolkien">
-                            </div>
+                <form>
+                    <div class="questions">
+                        <div class="question">
+                            <label for="title">Title*</label>
+                            <input type="text" id="title" required placeholder="The Hobbit">
                         </div>
-                        <div class="button-group">
-                            <button type="button" id="addBtn">Add</button>
-                            <button type="button" value="cancel" formmethod="dialog">Cancel</button>
+                        <div class="question">
+                            <label for="author">Author*</label>
+                            <input type="text" id="author" required placeholder="J.R.R. Tolkien">
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" id="addBtn">Add</button>
+                        <button type="button" value="cancel" formmethod="dialog">Cancel</button>
+                    </div>
+                </form>
             </dialog>
 
             <button type="button" class="add-book-button">New Book</button>
