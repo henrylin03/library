@@ -7,20 +7,7 @@ const dialogCancelBtn = document.querySelector("#cancelBtn");
 const newBookTitleInput = document.querySelector("#title");
 const newBookAuthorInput = document.querySelector("#author");
 
-const myLibrary = [
-  {
-    title: "Meditations",
-    author: "Marcus Aurelius",
-  },
-  {
-    title: "The Book of Five Rings",
-    author: "Miyamoto Musashi",
-  },
-  {
-    title: "Harry Potter and the Philosopher's Stone",
-    author: "J.K. Rowling",
-  },
-];
+const myLibrary = [];
 
 function Book(title, author) {
   this.title = title;
@@ -29,9 +16,12 @@ function Book(title, author) {
 
 function addBookToLibrary(e) {
   e.preventDefault();
+
   const newBook = new Book(newBookTitleInput.value, newBookAuthorInput.value);
   myLibrary.push(newBook);
-  console.log(newBook);
+
+  dialog.close();
+  displayBooks();
 }
 
 function displayBooks() {
