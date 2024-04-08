@@ -61,11 +61,25 @@ function displayBooks() {
     const authorName = document.createElement("small");
     authorName.textContent = book.author;
 
+    const hasReadDiv = document.createElement("div");
+    hasReadDiv.classList.add("read-status-container");
+    const checkbox = document.createElement("input");
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.setAttribute("id", "read-status");
+    checkbox.setAttribute("name", "read-status");
+    checkbox.setAttribute("value", "read");
+    const label = document.createElement("label");
+    label.setAttribute("for", "read-status");
+    label.textContent = "I've read this book";
+    hasReadDiv.appendChild(checkbox);
+    hasReadDiv.appendChild(label);
+
     // const hasRead = document.createElement("");
 
     bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);
     bookDiv.appendChild(authorName);
+    bookDiv.appendChild(hasReadDiv);
     booksDivs.push(bookDiv);
 
     bookIndex++;
