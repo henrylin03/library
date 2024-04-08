@@ -22,7 +22,6 @@ function addBookToLibrary(e) {
 
   dialog.close();
   displayBooks();
-  console.log(myLibrary);
 }
 
 function displayBooks() {
