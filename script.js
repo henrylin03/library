@@ -34,7 +34,7 @@ function addBookToLibrary(e) {
 }
 
 function removeBookFromLibrary() {
-  return;
+  console.log("book has been removed");
 }
 
 function displayBooks() {
@@ -52,6 +52,7 @@ function displayBooks() {
     const deleteBookBtn = document.createElement("button");
     deleteBookBtn.textContent = "x";
     deleteBookBtn.classList.add("delete-book-button");
+    deleteBookBtn.addEventListener("click", removeBookFromLibrary);
 
     bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);
