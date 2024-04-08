@@ -15,9 +15,10 @@ const toTitleCase = (str) =>
     .join(" ");
 
 // constructor
-function Book(title, author) {
+function Book(title, author, hasRead = false) {
   this.title = title;
   this.author = author;
+  this.hasRead = hasRead;
 }
 
 function addBookToLibrary(e) {
@@ -48,17 +49,19 @@ function displayBooks() {
     bookDiv.classList.add("book");
     bookDiv.setAttribute("array-index", bookIndex);
 
+    const deleteBookBtn = document.createElement("button");
+    deleteBookBtn.textContent = "x";
+    deleteBookBtn.classList.add("delete-book-button");
+    deleteBookBtn.setAttribute("array-index", bookIndex);
+    deleteBookBtn.addEventListener("click", removeBookFromLibrary);
+
     const bookName = document.createElement("strong");
     bookName.textContent = book.title;
 
     const authorName = document.createElement("small");
     authorName.textContent = book.author;
 
-    const deleteBookBtn = document.createElement("button");
-    deleteBookBtn.textContent = "x";
-    deleteBookBtn.classList.add("delete-book-button");
-    deleteBookBtn.setAttribute("array-index", bookIndex);
-    deleteBookBtn.addEventListener("click", removeBookFromLibrary);
+    // const hasRead = document.createElement("");
 
     bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);
