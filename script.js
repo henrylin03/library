@@ -44,7 +44,7 @@ function displayBooks() {
   const booksDivs = [];
   let bookIndex = 0;
 
-  function showDetails(book) {
+  function createBookElement(book) {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
     bookDiv.setAttribute("array-index", bookIndex);
@@ -71,7 +71,7 @@ function displayBooks() {
     bookIndex++;
   }
 
-  myLibrary.forEach((book) => showDetails(book));
+  myLibrary.forEach((book) => createBookElement(book));
   booksSection.replaceChildren(...booksDivs);
 }
 
