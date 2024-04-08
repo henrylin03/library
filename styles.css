@@ -46,6 +46,7 @@ section.books {
     border: 2px solid lightblue;
     border-radius: 10px;
     padding: 25px 20px;
+    position: relative;
 }
 
 button {
@@ -74,6 +75,10 @@ button:active {
 .delete-book-button {
     background: transparent;
     color: hsl(195, 53%, 65%);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: 400;
 }
 
 /* dialog / modal styling */
