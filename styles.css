@@ -76,3 +76,10 @@ dialog {
     min-width: 600px;
     padding: 25px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
