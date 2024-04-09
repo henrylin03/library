@@ -46,7 +46,8 @@ function removeBookFromLibrary(e) {
 function toggleReadStatus(e) {
   const bookIndex = e.target.getAttribute("array-index");
   myLibrary[bookIndex].hasRead = !myLibrary[bookIndex].hasRead;
-  console.log(myLibrary);
+  e.target.classList.toggle("read");
+  displayBooks();
 }
 
 function displayBooks() {
@@ -56,6 +57,7 @@ function displayBooks() {
   function createBookElement(book) {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
+    if (book.hasRead) bookDiv.classList.add("read");
     bookDiv.setAttribute("array-index", bookIndex);
 
     const deleteBookBtn = document.createElement("button");

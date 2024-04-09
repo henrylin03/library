@@ -49,6 +49,11 @@ section.books {
     position: relative;
 }
 
+.book.read {
+    background-color: hsl(177, 70%, 80%);
+    border-color: hsl(177, 70%, 60%);
+}
+
 .book .read-status-container {
     margin-top: 15px;
 }
