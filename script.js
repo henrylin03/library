@@ -43,6 +43,12 @@ function removeBookFromLibrary(e) {
   displayBooks();
 }
 
+function toggleReadStatus(e) {
+  const bookIndex = e.target.getAttribute("array-index");
+  myLibrary[bookIndex].hasRead = !myLibrary[bookIndex].hasRead;
+  console.log(myLibrary);
+}
+
 function displayBooks() {
   const booksDivs = [];
   let bookIndex = 0;
@@ -71,6 +77,7 @@ function displayBooks() {
     readBtn.setAttribute("array-index", bookIndex);
     readBtn.classList.add("read-btn");
     readBtn.textContent = "I've read this";
+    readBtn.addEventListener("click", toggleReadStatus);
     hasReadDiv.appendChild(readBtn);
 
     bookDiv.appendChild(deleteBookBtn);
@@ -84,11 +91,6 @@ function displayBooks() {
 
   myLibrary.forEach((book) => createBookElement(book));
   booksSection.replaceChildren(...booksDivs);
-}
-
-function toggleReadStatus() {
-  alert("triggered");
-  return;
 }
 
 // attach event listeners
