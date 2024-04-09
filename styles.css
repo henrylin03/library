@@ -63,11 +63,21 @@ section.books {
 .book-name {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    margin-right: 8px;
 }
 
-.book-name svg {
+.book.read .book-name {
+    margin-right: calc(1.5rem + 8px);
+}
+
+.book svg {
     width: 1.5rem;
+    display: none;
+}
+
+.book.read svg {
+    display: block;
 }
 
 .book .read-status-container {
