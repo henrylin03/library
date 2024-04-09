@@ -57,7 +57,6 @@ function displayBooks() {
   function createBookElement(book) {
     const bookDiv = document.createElement("div");
     bookDiv.classList.add("book");
-    if (book.hasRead) bookDiv.classList.add("read");
     bookDiv.setAttribute("array-index", bookIndex);
 
     const deleteBookBtn = document.createElement("button");
@@ -81,6 +80,10 @@ function displayBooks() {
     readBtn.textContent = "I've read this";
     readBtn.addEventListener("click", toggleReadStatus);
     hasReadDiv.appendChild(readBtn);
+
+    if (book.hasRead) {
+      bookDiv.classList.add("read");
+    }
 
     bookDiv.appendChild(deleteBookBtn);
     bookDiv.appendChild(bookName);

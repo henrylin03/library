@@ -111,9 +111,9 @@ button:active {
 
 .read-btn {
     border-radius: 25px;
-    box-shadow: 1px 2px 3px 1px hsl(0, 0%, 90%);
-    background-color: hsl(197, 80%, 95%);
-    color: hsl(197, 80%, 45%);
+    box-shadow: 1px 2px 3px 1px hsla(0, 0%, 60%, 30%);
+    background-color: hsl(197, 80%, 96%);
+    color: hsl(197, 90%, 45%);
     font-weight: 500;
     font-size: 0.75rem;
     padding: 10px 20px;
