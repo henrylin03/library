@@ -60,6 +60,16 @@ section.books {
     color: white;
 }
 
+.book-name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.book-name svg {
+    width: 1.5rem;
+}
+
 .book .read-status-container {
     margin-top: 15px;
 }
