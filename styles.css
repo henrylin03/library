@@ -55,8 +55,9 @@ section.books {
 }
 
 .book.read {
-    background-color: var(--secondary-clr);
-    border-color: var(--primary-clr);
+    background-color: var(--primary-clr);
+    border-color: var(--secondary-clr);
+    color: white;
 }
 
 .book .read-status-container {
@@ -101,7 +102,7 @@ button:active {
 }
 
 .read .delete-book-button {
-    color: var(--primary-clr);
+    color: rgba(255, 255, 255, .8);
 }
 
 .delete-book-button:hover {
