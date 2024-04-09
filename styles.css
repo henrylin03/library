@@ -64,20 +64,16 @@ section.books {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-right: 8px;
-}
-
-.book.read .book-name {
-    margin-right: calc(1.5rem + 8px);
+    margin-right: calc(5px + 1.5rem);
 }
 
 .book svg {
     width: 1.5rem;
-    display: none;
+    visibility: hidden;
 }
 
 .book.read svg {
-    display: block;
+    visibility: visible;
 }
 
 .book .read-status-container {
