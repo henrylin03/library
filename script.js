@@ -15,22 +15,22 @@ const toTitleCase = (str) =>
     .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
     .join(" ");
 
-// constructor
-function Book(title, author, hasRead) {
-  this.title = title;
-  this.author = author;
-  this.hasRead = hasRead;
+class Book {
+  constructor(title, author, hasRead) {
+    this.title = toTitleCase(title);
+    this.author = toTitleCase(author);
+    this.hasRead = hasRead;
+  }
 }
 
 function addBookToLibrary(e) {
   e.preventDefault();
 
   const newBook = new Book(
-    toTitleCase(newBookTitleInput.value),
-    toTitleCase(newBookAuthorInput.value),
+    newBookTitleInput.value,
+    newBookAuthorInput.value,
     hasReadCheckboxInDialog.checked
   );
-  console.log(newBook);
   myLibrary.push(newBook);
 
   dialog.close();
