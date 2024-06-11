@@ -73,7 +73,7 @@ function displayBooks() {
     deleteBookBtn.textContent = "x";
     deleteBookBtn.classList.add("delete-book-button");
     deleteBookBtn.setAttribute("array-index", bookIndex);
-    deleteBookBtn.addEventListener("click", removeBookFromLibrary);
+    deleteBookBtn.addEventListener("mousedown", removeBookFromLibrary);
 
     const bookNameDiv = document.createElement("div");
     const checkIconContainer = document.createElement("figure");
@@ -94,7 +94,7 @@ function displayBooks() {
     readBtn.setAttribute("array-index", bookIndex);
     readBtn.classList.add("read-btn");
     readBtn.textContent = "I've read this";
-    readBtn.addEventListener("click", toggleReadStatus);
+    readBtn.addEventListener("mousedown", toggleReadStatus);
     hasReadDiv.appendChild(readBtn);
 
     bookNameDiv.appendChild(checkIconContainer);
@@ -113,8 +113,8 @@ function displayBooks() {
 }
 
 // attach event listeners
-openDialogBtn.addEventListener("click", () => dialog.showModal());
-dialogCancelBtn.addEventListener("click", () => {
+openDialogBtn.addEventListener("mousedown", () => dialog.showModal());
+dialogCancelBtn.addEventListener("mousedown", () => {
   dialog.close();
   form.reset();
 });
