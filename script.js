@@ -23,6 +23,10 @@ class Book {
   }
 }
 
+function checkValidity(e) {
+  console.log(e.target);
+}
+
 function addBookToLibrary(e) {
   e.preventDefault();
 
@@ -107,3 +111,6 @@ function displayBooks() {
 openDialogBtn.addEventListener("click", () => dialog.showModal());
 dialogCancelBtn.addEventListener("click", () => dialog.close());
 form.addEventListener("submit", addBookToLibrary);
+[newBookTitleInput, newBookAuthorInput].forEach((input) =>
+  input.addEventListener("input", checkValidity)
+);
