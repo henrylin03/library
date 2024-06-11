@@ -42,6 +42,7 @@ function addBookToLibrary(e) {
   myLibrary.push(newBook);
 
   dialog.close();
+  form.reset();
   displayBooks();
 }
 
@@ -113,7 +114,10 @@ function displayBooks() {
 
 // attach event listeners
 openDialogBtn.addEventListener("click", () => dialog.showModal());
-dialogCancelBtn.addEventListener("click", () => dialog.close());
+dialogCancelBtn.addEventListener("click", () => {
+  dialog.close();
+  form.reset();
+});
 form.addEventListener("submit", addBookToLibrary);
 [newBookTitleInput, newBookAuthorInput].forEach((input) =>
   input.addEventListener("input", checkValidity)
