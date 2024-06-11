@@ -168,6 +168,10 @@ form {
     gap: 5px;
 }
 
+.error-message {
+    color: red;
+}
+
 dialog label {
     font-size: 0.75rem;
     color: hsl(195, 53%, 40%);
