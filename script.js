@@ -24,7 +24,10 @@ class Book {
 }
 
 function checkValidity(e) {
-  console.log(e.target);
+  const inputElement = e.target;
+  if (inputElement.validity.valueMissing)
+    inputElement.setCustomValidity("This is a required field");
+  else inputElement.setCustomValidity("");
 }
 
 function addBookToLibrary(e) {
