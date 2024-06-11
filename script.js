@@ -25,9 +25,10 @@ class Book {
 
 function checkValidity(e) {
   const inputElement = e.target;
-  if (inputElement.validity.valueMissing)
-    inputElement.setCustomValidity("This is a required field");
-  else inputElement.setCustomValidity("");
+  const questionDiv = inputElement.parentNode;
+  questionDiv.classList.remove("error");
+  if (inputElement.validity.valueMissing) questionDiv.classList.add("error");
+  else questionDiv.classList.remove("error");
 }
 
 function addBookToLibrary(e) {

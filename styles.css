@@ -169,12 +169,12 @@ form {
 }
 
 .error-message {
-    display: none;
+    visibility: hidden;
     color: red;
 }
 
 .error .error-message {
-    display: block;
+    visibility: visible;
 }
 
 label {
