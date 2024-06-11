@@ -169,7 +169,12 @@ form {
 }
 
 .error-message {
+    display: none;
     color: red;
+}
+
+.error .error-message {
+    display: block;
 }
 
 dialog label {
@@ -200,6 +205,11 @@ input[type="text"] {
 
 input[type="text"]:focus {
     border: 2px solid hsl(195, 80%, 40%);
+    box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.error input[type="text"] {
+    border: 2px solid red;
     box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2);
 }
 
