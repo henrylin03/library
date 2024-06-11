@@ -177,9 +177,13 @@ form {
     display: block;
 }
 
-dialog label {
+label {
     font-size: 0.75rem;
     color: hsl(195, 53%, 40%);
+}
+
+.error label {
+    color: red;
 }
 
 .read-status-container {
