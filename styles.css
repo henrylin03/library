@@ -165,11 +165,25 @@ form {
 .question {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
-dialog label {
+.error-message {
+    visibility: hidden;
+    color: red;
+}
+
+.error .error-message {
+    visibility: visible;
+}
+
+label {
     font-size: 0.75rem;
     color: hsl(195, 53%, 40%);
+}
+
+.error label {
+    color: red;
 }
 
 .read-status-container {
@@ -195,6 +209,11 @@ input[type="text"] {
 
 input[type="text"]:focus {
     border: 2px solid hsl(195, 80%, 40%);
+    box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.error input[type="text"] {
+    border: 2px solid red;
     box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.2);
 }
 
